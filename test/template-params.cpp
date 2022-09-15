@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 
 #include <template-begin/params.hpp>
+#include <vector>
 
 TEST(CppTemplateBegin, Params)
 {
@@ -21,4 +22,6 @@ TEST(CppTemplateBegin, Params)
 	show_times<2>("2");
 
 	ASSERT_EQ(sumto<true>(2), 2);
+	std::vector<int> v {1, 2, 3};
+	print(v);
 }

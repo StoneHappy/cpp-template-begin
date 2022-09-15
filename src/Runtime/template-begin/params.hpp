@@ -2,6 +2,7 @@
 #include "template-begin/params.hpp"
 #include <iostream>
 #include <string>
+#include <vector>
 template<class T>
 T two(T t)
 {
@@ -39,4 +40,14 @@ int sumto(int n)
         }
     }
     return rnt;
+}
+
+template<class T>
+void print(std::vector<T> const & v)
+{
+    std::cout << "{ ";
+    for (int i = 0; i < v.size(); i++) {
+        std::cout << v[i] << ((i==(v.size()-1))? " " : ", " );
+    }
+    std::cout << "}" << std::endl;
 }
