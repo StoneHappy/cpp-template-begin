@@ -15,4 +15,5 @@ TEST(CppTemplateBegin, Params)
 	ASSERT_EQ(two(5.12l), 10.24l);
 
 	ASSERT_EQ(two(std::string("12")), "1212");
+	ASSERT_EQ(two(), 2);
 }
