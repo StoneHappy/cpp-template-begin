@@ -27,3 +27,16 @@ void show_times(T t)
         std::cout << t << std::endl;
     }
 }
+
+template <bool debug>
+int sumto(int n)
+{
+    int rnt = 0;
+    for (int i = 0; i < n; i++) {
+        rnt++;
+        if constexpr (debug) {
+            std::cout << i << "th = " << rnt << std::endl;
+        }
+    }
+    return rnt;
+}

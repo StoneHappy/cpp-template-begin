@@ -19,4 +19,6 @@ TEST(CppTemplateBegin, Params)
 	
 	show_times("1");
 	show_times<2>("2");
+
+	ASSERT_EQ(sumto<true>(2), 2);
 }
