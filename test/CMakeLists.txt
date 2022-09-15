@@ -1,4 +1,4 @@
-set(TARGET_NAME "ExampleTest")
+set(TARGET_NAME "cpp-template-begin-test")
 # just for qt
 # set(CMAKE_AUTOUIC ON)
 # set(CMAKE_AUTOMOC ON)
