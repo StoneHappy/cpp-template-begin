@@ -16,4 +16,7 @@ TEST(CppTemplateBegin, Params)
 
 	ASSERT_EQ(two(std::string("12")), "1212");
 	ASSERT_EQ(two(), 2);
+	
+	show_times("1");
+	show_times<2>("2");
 }
