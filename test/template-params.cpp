@@ -1,3 +1,4 @@
+#include "template-begin/func.hpp"
 #include <gtest/gtest.h>
 
 #include <template-begin/params.hpp>
@@ -24,4 +25,10 @@ TEST(CppTemplateBegin, Params)
 	ASSERT_EQ(sumto<true>(2), 2);
 	std::vector<int> v {1, 2, 3};
 	print(v);
+}
+
+TEST(CppTemplateBegin, Func)
+{
+	auto f0 = make_twice(1);
+	call_twice(f0);
 }
