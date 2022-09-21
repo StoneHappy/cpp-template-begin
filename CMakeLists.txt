@@ -4,8 +4,6 @@ project(cpp-template-begin VERSION 0.1.0)
 
 
 option(ENABLE_TEST "Enable google test" ON)
-option(ENABLE_DOCS "Enable doxygen docs" ON)
-
 
 # just for qt
 # set(CMAKE_AUTOUIC ON)
@@ -20,7 +18,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # set(DOXYFILE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in" CACHE STRING INTERNAL FORCE)
 
 include(cmake/tools.cmake)
-include(cmake/doxygen.cmake)
 
 # ---- Include guards ----
 if(PROJECT_SOURCE_DIR STREQUAL PROJECT_BINARY_DIR)
@@ -48,8 +45,4 @@ add_subdirectory(src)
 if(ENABLE_TEST)
 enable_testing()
 add_subdirectory(test)
-endif()
-
-if(ENABLE_DOCS)
-  build_docs(PROCESS_DOXYFILE TRUE DOXYFILE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/doc/Doxyfile.in")
 endif()
